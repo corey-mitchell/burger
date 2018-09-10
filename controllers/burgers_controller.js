@@ -6,11 +6,19 @@ const router = express.Router();
 const burger = require('../models/burger.js');
 
 // Creates routes
-// router.get('/', (req, res)=>{
-//     burger.all((data)=>{
-//         const 
-//     })
-// })
+router.get('/', (req, res)=>{
+    burger.all((data)=>{
+        const brgrObject = {
+            burger: data
+        };
+        console.log(brgrObject);
+        res.render('index', brgrObject);
+    });
+});
+
+router.post('/api/burgers', (req, res)=>{
+    burger.create([])
+});
 
 // Exports router
 module.exports = router;

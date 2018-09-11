@@ -1,3 +1,3 @@
-INSERT INTO burgers (burger, devoured) VALUE ('Honey BBQ Chicken Strip Sandwich', false);
-INSERT INTO burgers (burger, devoured) VALUE ('Avocado Bacon Burger', false);
-INSERT INTO burgers (burger, devoured) VALUE ('Chop House Cheddar Burger', false);
+INSERT INTO burgers (burger) VALUE ('Honey BBQ Chicken Strip Sandwich');
+INSERT INTO burgers (burger) VALUE ('Avocado Bacon Burger');
+INSERT INTO burgers (burger) VALUE ('Chop House Cheddar Burger');

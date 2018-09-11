@@ -16,8 +16,30 @@ router.get('/', (req, res)=>{
     });
 });
 
-router.post('/api/burgers', (req, res)=>{
-    burger.create([])
+router.post('/api/burger', (req, res)=>{
+    burger.create([
+        'burger',
+        req.body.burger,
+        (result)=>{
+            res.json({ id: result.insertId })
+        }
+    ]);
+});
+
+router.put("api/burger/:id", (req, res)=>{
+    const condition = `id = ${req.params.id}`;
+
+    console.log(condition)
+
+    burger.update({
+        devoured: req.body.devoured
+    }, condition, (result)=>{
+        if(result.changedRows === 0) {
+            return res.status(404).end();
+        } else {
+            res.status(200).end()
+        }
+    });
 });
 
 // Exports router

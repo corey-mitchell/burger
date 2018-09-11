@@ -1,0 +1,21 @@
+<li>
+    {{#unless devoured}}
+        <button class="button" data-id="{{id}}" data-eaten="{{devoured}}">
+            Eat Da Burger
+        </button>
+    {{/unless}}
+</li>
+
+<script>
+    $('.button').on('click', (event)=>{
+        // console.log(event);
+
+        //const id = $(this).data("id");
+        //const devoured = $(this).data("devoured");
+  
+        //const eaten = {
+        //    devoured: devoured
+        //};
+        console.log($(this))
+    })
+</script>

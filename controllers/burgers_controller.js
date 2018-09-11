@@ -11,7 +11,7 @@ router.get('/', (req, res)=>{
         const brgrObject = {
             burger: data
         };
-        console.log(brgrObject);
+        // console.log(brgrObject);
         res.render('index', brgrObject);
     });
 });

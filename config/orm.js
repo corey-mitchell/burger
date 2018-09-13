@@ -1,6 +1,17 @@
 // Imports connection.js
 const connection = require('./connection.js');
 
+
+const printQuestionMarks = num => {
+    var arr = [];
+  
+    for (var i = 0; i < num; i++) {
+      arr.push("?");
+    }
+  
+    return arr.toString();
+  }
+
 // Executes MySQL commands
 const orm ={
     all: (tableInput, cb)=>{
@@ -13,9 +24,8 @@ const orm ={
         });
     },
     create: (table, cols, vals, cb)=>{
-        const queryString = `INSERT INTO ${table} (${cols.toString()}) VALUES (${printQuestionMarks(val.length)})`;
-
-        console.log(queryString);
+        const queryString = `INSERT INTO ${table} (${cols.toString()}) VALUES (${printQuestionMarks(vals.length)})`;
+        // console.log(queryString);
 
         connection.query(queryString, vals, (err, res)=>{
             if (err) throw err;

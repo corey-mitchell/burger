@@ -15,8 +15,8 @@ const burgers = {
     },
     update: (objColVals, condition, cb)=>{
         // console.log(objColVals.devoured);
-        const colVals = objColVals.devoured
-        orm.update('burgers', colVals, condition, (res)=>{
+        // const colVals = objColVals.devoured
+        orm.update('burgers', objColVals, condition, (res)=>{
             cb(res);
         });
     }

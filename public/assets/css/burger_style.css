@@ -8,3 +8,34 @@ body {
     margin-right: auto;
     width: 50%;
 }
+
+#title {
+    color: white;
+    text-shadow: 5px 5px black;
+    font-size: 70px;
+    font-family: 'Berkshire Swash', cursive;
+}
+
+.listTitles {
+    color: white;
+    text-shadow: 5px 5px black;
+    font-size: 70px;
+    font-family: 'Amatic SC', cursive;
+}
+
+.burgerItems {
+    color: white;
+    text-shadow: 5px 5px black;
+    font-size: 35px;
+    font-family: 'Amatic SC', cursive;
+}
+
+.eatButton {
+    font-family: 'Berkshire Swash', cursive;
+    cursor: pointer;
+}
+
+#sbmtBtn {
+    font-family: 'Berkshire Swash', cursive;
+    cursor: pointer;
+}

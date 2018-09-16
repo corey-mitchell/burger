@@ -30,7 +30,6 @@ $(()=>{
     const newBurger = {
       burgerName: $("#burgerName").val().trim()
     };
-    // console.log(newBurger)
   
     // Send the POST request.
     $.ajax("/api/burger", {

@@ -3,16 +3,18 @@
         <img id="burgerImg" class="w-25 h-25" src="assets/images/1779865_1.jpg" alt="cartoon burger">
     </div>
 
-    <h1 class="text-center">EAT DA BURGER!</h1>
+    <h1 id="title" class="text-center">EAT MUH BURGER!</h1>
+
+    <hr>
 
     <div class="row text-center">
-        <div id="uneaten" class="col-lg-6">
-            <h2>Burger to Eat!</h2>
+        <div id="uneaten" class="col-lg-8">
+            <h2 class="listTitles">Burgers to Eat!</h2>
 
             <div id="burgerList">
                 <ol class="row">
                 {{#each burger}}
-                    <div class="col-6">
+                    <div class="col-6 burgerItems">
                     {{#unless devoured}}                
                         {{burger}}
                     {{/unless}}
@@ -27,10 +29,10 @@
             </div>
         </div>
 
-        <div id="eaten" class="col-lg-6">
-            <h2>Burgers Eaten!</h2>
+        <div id="eaten" class="col-lg-4">
+            <h2 class="listTitles">Burgers Eaten!</h2>
 
-            <div id="eatenBurgs">
+            <div id="eatenBurgs" class="burgerItems">
                 <ul>
                 {{#each burger}}
                     {{#if devoured}}
@@ -44,16 +46,16 @@
         </div>
     </div>
 
-    <div id="burgerForm">
-        <h2>Add a Burger</h2>
+    <div id="burgerForm" class="text-center">
+        <h2 class="listTitles">Add a Burger</h2>
 
         <form id="create-form">
             <div id="form-group">
-                <label>Burger Name:</label>
-                <input id="burgerName" type="text" name="name">
+                <label class="burgerItems">Name:</label>
+                <input type="text" name="name" id="burgerName">
             </div>
 
-            <button type="submit">Add Burger</button>
+            <button type="submit" id="sbmtBtn">Add Burger</button>
         </form>
     </div>
 </div>

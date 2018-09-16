@@ -1,0 +1,10 @@
+body {
+    background-color: #c62b29;
+}
+
+#burgerImg {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}

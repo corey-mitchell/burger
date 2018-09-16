@@ -1,48 +1,59 @@
-{{!-- <img id="burgerImg" src="#" alt=""> --}}
-
-<h1>EAT DA BURGER!</h1>
-
-<div id="uneaten">
-    <h2>Burger to Eat!</h2>
-
-    <div id="burgerList">
-        <ul>
-        {{#each burger}}
-            {{#unless devoured}}
-                {{burger}}
-                
-                {{> burgers/burger-block devoured=true}}
-            {{/unless}}
-        {{/each}}
-        </ul>
+<div class="container">
+    <div>
+        <img id="burgerImg" class="w-25 h-25" src="assets/images/1779865_1.jpg" alt="cartoon burger">
     </div>
-</div>
 
-<div id="eaten">
-    <h2>Burgers Eaten!</h2>
+    <h1 class="text-center">EAT DA BURGER!</h1>
 
-    <div id="eatenBurgs">
-        <ul>
-        {{#each burger}}
-            {{#if devoured}}
-                {{burger}}
+    <div class="row text-center">
+        <div id="uneaten" class="col-lg-6">
+            <h2>Burger to Eat!</h2>
 
-                {{> burgers/burger-block devoured=false}}
-            {{/if}}
-        {{/each}}
-        </ul>
-    </div>
-</div>
-
-<div id="burgerForm">
-    <h2>Add a Burger</h2>
-
-    <form id="create-form">
-        <div id="form-group">
-            <label>Burger Name:</label>
-            <input id="burgerName" type="text" name="name">
+            <div id="burgerList">
+                <ol class="row">
+                {{#each burger}}
+                    <div class="col-6">
+                    {{#unless devoured}}                
+                        {{burger}}
+                    {{/unless}}
+                    </div>
+                    <div class='col-6'>
+                     {{#unless devoured}}                
+                       {{> burgers/burger-block devoured=true}}
+                    {{/unless}}
+                    </div>
+                {{/each}}
+                </ol>
+            </div>
         </div>
 
-        <button type="submit">Add Burger</button>
-    </form>
+        <div id="eaten" class="col-lg-6">
+            <h2>Burgers Eaten!</h2>
+
+            <div id="eatenBurgs">
+                <ul>
+                {{#each burger}}
+                    {{#if devoured}}
+                        {{burger}}
+
+                        {{> burgers/burger-block devoured=false}}
+                    {{/if}}
+                {{/each}}
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div id="burgerForm">
+        <h2>Add a Burger</h2>
+
+        <form id="create-form">
+            <div id="form-group">
+                <label>Burger Name:</label>
+                <input id="burgerName" type="text" name="name">
+            </div>
+
+            <button type="submit">Add Burger</button>
+        </form>
+    </div>
 </div>

@@ -8,9 +8,9 @@
     <div id="burgerList">
         <ul>
         {{#each burger}}
-            {{burger}}
-
             {{#unless devoured}}
+                {{burger}}
+                
                 {{> burgers/burger-block devoured=true}}
             {{/unless}}
         {{/each}}

@@ -40,7 +40,7 @@ const orm ={
         const queryString = `SELECT * FROM ${tableInput};`;
 
         connection.query(queryString, (err, res)=>{
-            if (err) throw err;
+            // if (err) throw err;
 
             cb(res);
         });

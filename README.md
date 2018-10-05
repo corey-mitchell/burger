@@ -4,7 +4,7 @@ A restaurant app that lets users input the names of burgers they'd like to eat. 
 
 ## Demo
 
-Try out the demo, [here]().
+Try out the demo, [here](https://eat-muh-burger.herokuapp.com/).
 
 ## Running Locally
 

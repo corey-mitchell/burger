@@ -41,7 +41,6 @@ const orm ={
 
         connection.query(queryString, (err, res)=>{
             // if (err) throw err;
-
             cb(res);
         });
     },
@@ -50,18 +49,17 @@ const orm ={
         // console.log(queryString);
 
         connection.query(queryString, vals, (err, res)=>{
-            if (err) throw err;
-
+            // if (err) throw err;
             cb(res);
         });
     },
     update: (table, objColVals, condition, cb)=>{
-        console.log(objColVals);
+        // console.log(objColVals);
         const queryString = `UPDATE ${table} SET ${objToSql(objColVals)} WHERE ${condition}`;
 
-        console.log(queryString);
+        // console.log(queryString);
         connection.query(queryString, (err, res)=>{
-            if (err) throw err;
+            // if (err) throw err;
             cb(res);
         });
     }

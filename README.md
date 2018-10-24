@@ -64,4 +64,4 @@ app.set("view engine", "handlebars");
 
 ## Author
 
-* **Corey Mitchell** - *Initial work* - (https://github.com/corey-mitchell)
+* **Corey Mitchell** - (https://github.com/corey-mitchell)
